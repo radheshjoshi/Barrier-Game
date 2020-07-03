@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrier Game</title>
+    <style>
+        canvas{
+            background-color: gray;
+            border: 2px solid #000;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width:600px;
+        }
+        button{
+            cursor: pointer;
+        }
+        /* #audio{
+            display: none;
+        } */
+    </style>
+</head>
+
+<body onload="startGame()">
+    <canvas id="canvas"></canvas>
+    <!-- <div> -->
+        <!-- <button> Play with arrow keys</button> -->
+        <!-- <button> Play with game controls</button> -->
+    <!-- </div> -->
+    <div  style="text-align:center;width:480px;">
+        <button  onmouseup="stopMove()" onmousedown="moveUp()">Up</button><br><br>
+        <button  onmouseup="stopMove()" onmousedown="moveLeft()">Left</button>
+        <button  onmouseup="stopMove()" onmousedown="moveRight()">Right</button><br><br>
+        <button  onmouseup="stopMove()" onmousedown="moveDown()">Down</button><br><br>
+    </div>
+    <!-- <audio src="src/fyoladiya.mp3" id="audio" preload="auto" controls type="audio/mp3" autoplay='true'></audio> -->
+    <script src="game.js"></script>
+</body>
+</html>
